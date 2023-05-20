@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Сторінка входу</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        
+        .login-window {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: lime;
+            border: 5px solid orange;
+            text-align: center;
+            animation: scaleAnimation 1s;
+        }
+        
+        @keyframes scaleAnimation {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .login-window input[type="text"], 
+        .login-window input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .login-window h2 {
+            color: blue;
+        }
+        
+        .login-window .submit-button {
+            display: block;
+            width: 50%;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .login-window .submit-button:hover {
+            background-color: darkblue;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .login-window {
+                width: 80%;
+                margin: 50px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-window">
+        <h2>Залогіньтеся будь ласка</h2>
+        <input type="text" placeholder="Логін"><br>
+        <input type="password" placeholder="Пароль"><br>
+        <button class="submit-button" onclick="submitForm()">Увійти</button>
+    </div>
+
+    <script>
+        function submitForm() {
+            var loginValue = document.querySelector('input[type="text"]').value;
+            var passwordValue = document.querySelector('input[type="password"]').value;
+            
+            if (loginValue !== '' && passwordValue !== '') {
+                window.location.href = 'services.html'; // Змініть "new-page.html" на шлях до бажаної сторінки
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+

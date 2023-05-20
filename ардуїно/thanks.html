@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Сторінка входу</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        
+        .login-window {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: lime;
+            border: 5px solid orange;
+            text-align: center;
+            animation: scaleAnimation 1s;
+        }
+        
+        @keyframes scaleAnimation {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .login-window h2 {
+            color: blue;
+        }
+        
+        .login-window .start-button {
+            display: block;
+            width: 50%;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .login-window .start-button:hover {
+            background-color: darkblue;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .login-window {
+                width: 80%;
+                margin: 50px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-window">
+        <h2>Дякуємо за реєстрацію</h2>
+        <button class="start-button" onclick="startServices()">Почати користуватися нашими послугами</button>
+    </div>
+
+    <script>
+        function startServices() {
+            window.location.href = 'services.html'; // Змініть "services.html" на шлях до бажаної сторінки
+        }
+    </script>
+</body>
+</html>
+
